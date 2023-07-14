@@ -1,0 +1,12 @@
+public String registerStudent(String name, String phone, String email) {
+    apxio__Student__c std = new apxio__Student__c(
+        Name = name,
+        apxio__Email__c = email,
+        apxio__Phone__c = phone
+    );
+
+    insert std;
+
+    std = [select apxio__Registration_Number__c from apxio__Student__c where Id = :std.Id];
+    return std.apxio__Registration_Number__c;
+}
