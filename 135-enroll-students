@@ -1,0 +1,19 @@
+public void enrollStudents(List<String> emails, String className) {
+    List<apxio__Class__c> clsList = [select Id, Name from apxio__Class__c where Name = :className];
+    if (clsList.size() == 0) return;
+
+    List<apxio__Class_Enrollment__c> enrList = new List<apxio__Class_Enrollment__c>();
+    for (apxio__Student__c std : [
+        select Id, Name, apxio__Email__c 
+        from apxio__Student__c 
+        where apxio__Email__c in :emails
+    ]) {
+        enrList.add(new apxio__Class_Enrollment__c(
+            apxio__Offered_Class__c = clsList[0].Id,
+            apxio__Student__c = std.Id
+        ));
+    }
+
+    if (!enrList.isEmpty()) insert enrList;
+
+}
