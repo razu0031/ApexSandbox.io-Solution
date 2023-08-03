@@ -6,9 +6,9 @@ public class LinkedList{
     }
     
     public void addToFront(Integer value){
-        Node node = new Node(value);
-        //node.next = head == null ? null : new Node(head.data, head.next);
-        //head = node;
+        Node node = new Node(value, null);
+        node.next = head == null ? null : new Node(head.data, head.next);
+        head = node;
     }
 
     public Integer removeFromFront(){
