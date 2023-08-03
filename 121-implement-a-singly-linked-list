@@ -14,7 +14,8 @@ public class LinkedList{
     public Integer removeFromFront(){
         if (head == null) return null;
         Integer value = head.data;
-        head = head.next;
+        Node temp = head;
+        head = temp.next;
         return value;
     }
 
