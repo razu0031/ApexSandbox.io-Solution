@@ -10,6 +10,9 @@ public class LinkedList{
         node.data = value;
         node.next = head;
         head = node;
+
+        system.debug('node.data : ' + node.data);
+        system.debug('node.next : ' + node.next);
     }
 
     public Integer removeFromFront(){
