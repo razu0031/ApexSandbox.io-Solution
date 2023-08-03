@@ -39,7 +39,7 @@ public class LinkedList{
         Node tail = head;
         while(tail.next != null) {
             beforeTail = tail;
-            tail = head.next;
+            tail = tail.next;
         }
 
         beforeTail.next = null;
@@ -52,7 +52,7 @@ public class LinkedList{
         Node tail = head;
         while(tail.next != null) {
             size++;
-            tail = head.next;
+            tail = tail.next;
         }
 
         return size;
