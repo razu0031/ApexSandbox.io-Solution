@@ -1,0 +1,25 @@
+public class Stack {
+    
+    List<Object> stack = new List<Object>();
+    public void push(Object obj) {
+        stack.add(obj);
+    }
+    
+    public Object pop() {
+        if (stack.size() <= 0) return null;
+        retuen stack.remove(stack.size()-1);
+    }
+    
+    public Integer size() {
+        return stack.size();
+    }
+    
+    public Object peek(){
+        if (stack.size() <= 0) return null;
+        retuen stack[stack.size()-1];
+    }
+    
+    public Boolean isEmpty() {
+        return stack.isEmpty();
+    }
+}
