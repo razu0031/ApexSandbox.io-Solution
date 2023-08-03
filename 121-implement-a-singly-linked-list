@@ -63,7 +63,7 @@ public class Node{
     Integer data;
     Node next;
 
-    Node(Integer data, next) {
+    public Node(Integer data, Node next) {
         this.data = data;
         this.next = next;
     }
