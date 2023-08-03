@@ -6,13 +6,9 @@ public class LinkedList{
     }
     
     public void addToFront(Integer value){
-        Node node = new Node();
-        node.data = value;
-        node.next = head;
+        Node node = new Node(value);
+        node.next = head == null ? null : new Node(head.data, head.next);
         head = node;
-
-        system.debug('node.data : ' + node.data);
-        system.debug('node.next : ' + node.next);
     }
 
     public Integer removeFromFront(){
@@ -23,9 +19,7 @@ public class LinkedList{
     }
 
     public void addToTail(Integer value){
-        Node node = new Node();
-        node.data = value;
-        node.next = null;
+        Node node = new Node(value, null);
 
         if (head == null) {
             head = node;
@@ -68,4 +62,9 @@ public class LinkedList{
 public class Node{
     Integer data;
     Node next;
+
+    Node(Integer data, next) {
+        this.data = data;
+        this.next = next;
+    }
 }
