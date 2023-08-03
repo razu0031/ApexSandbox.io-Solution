@@ -1,5 +1,5 @@
 public class LinkedList{
-    Node head;
+    public Node head;
 
     public LinkedList() {
         head = null;
@@ -31,7 +31,7 @@ public class LinkedList{
 
         Node tail = head;
         while(tail.next != null) {
-            tail = head.next
+            tail = head.next;
         }
         tail.next = node;
     }
@@ -57,7 +57,7 @@ public class LinkedList{
             size++;
             tail = head.next;
         }
-        
+
         return size;
     }    
 }
