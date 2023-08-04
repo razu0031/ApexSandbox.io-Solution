@@ -4,7 +4,7 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
         list2.sort();
         return list2;
     } 
-    else if (list1 != null && list2 == null) r{
+    else if (list1 != null && list2 == null) {
         list1.sort();
         return list1;
     }
