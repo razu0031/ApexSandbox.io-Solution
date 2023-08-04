@@ -42,8 +42,10 @@ public class LinkedList{
             tail = tail.next;
         }
 
-        beforeTail.next = null;
-        return beforeTail.data;
+        if (beforeTail != null) beforeTail.next = null;
+        else head = null;
+        
+        return tail.data;
     }
 
     public Integer size(){
