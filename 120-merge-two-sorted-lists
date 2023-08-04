@@ -1,0 +1,15 @@
+public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
+    if (list1 == null && list2 == null) return null;
+    else if(list1 == null && list2 != null) {
+        list2.sort();
+        return list2;
+    } 
+    else if (list1 != null && list2 == null) r{
+        list1.sort();
+        return list1;
+    }
+
+    list1 = list1.addAll(list2);
+    list1.sort();
+    return list1;
+}
