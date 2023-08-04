@@ -1,5 +1,5 @@
 public Boolean isPalindrome(String str){
     if (String.isBlank(str)) return true;
-    str = str.toLowerCase().replaceAll([^a-z0-9],'');
+    str = str.toLowerCase().replaceAll('[^a-z0-9]','');
     return str == str.reverse();
 }
