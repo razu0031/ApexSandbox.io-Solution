@@ -6,9 +6,9 @@ public static Integer search2(List<Opportunity> opportunities, Integer target, I
     if (left > right) return -1;
 
     Integer middle = (left + right) / 2;
-    if (target == opportunities[middle]) return middle;
-    else if (target < opportunities[middle]) right = middle - 1;
-    else if (target > opportunities[middle]) left = middle + 1;
+    if (target == opportunities[middle].Amount) return middle;
+    else if (target < opportunities[middle].Amount) right = middle - 1;
+    else if (target > opportunities[middle].Amount) left = middle + 1;
 
     return search2(opportunities, target, left, right);
 }
