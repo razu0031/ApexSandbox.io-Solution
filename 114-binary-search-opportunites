@@ -1,0 +1,14 @@
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    return search(opportunities, target, 0, opportunities.size()-1);
+}
+
+public static Integer search2(List<Opportunity> opportunities, Integer target, Integer left, Integer right){
+    if (left > right) return -1;
+
+    Integer middle = (left + right) / 2;
+    if (target == opportunities[middle]) return middle;
+    else if (target < opportunities[middle]) right = middle - 1;
+    else if (target > opportunities[middle]) left = middle + 1;
+
+    return search2(opportunities, target, left, right);
+}
