@@ -10,5 +10,5 @@ public static Integer searchRecursion(List<Opportunity> opportunities, Integer t
     else if (target < opportunities[middle].Amount) right = middle - 1;
     else if (target > opportunities[middle].Amount) left = middle + 1;
 
-    return search2(opportunities, target, left, right);
+    return searchRecursion(opportunities, target, left, right);
 }
