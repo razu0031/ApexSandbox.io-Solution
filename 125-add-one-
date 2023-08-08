@@ -6,20 +6,21 @@ public void plusOne(List<Integer> numbers) {
     //     numbers.add(Integer.valueOf(n));
     // }
     Integer right = numbers.size()-1;
-    Integer carry = 1;
+    
     if (numbers[right] == 9) {
-        // while (numbers[right] + carry == 10) {
-        //     numbers[right] = 0;
-        //     right--;
+        Integer carry = 1;
+        while (numbers[right] + carry == 10) {
+            numbers[right] = 0;
+            right--;
 
-        //     if (right < 0) {
-        //         numbers[0] = 1;
-        //         break;
-        //     }
+            if (right < 0) {
+                numbers.add(0,1);
+                break;
+            }
             
-        //     numbers[right] = numbers[right]++;
-        //     carry = 0;
-        // }
+            numbers[right] = numbers[right]++;
+            carry = 0;
+        }
     }
     else {
         numbers[right]++;
