@@ -13,13 +13,13 @@ public void plusOne(List<Integer> numbers) {
             numbers[right] = 0;
             right--;
 
-            if (right < 0) {
-                numbers.add(0,1);
-                break;
-            }
+            // if (right < 0) {
+            //     numbers.add(0,1);
+            //     break;
+            // }
             
-            numbers[right] = numbers[right]++;
-            carry = 0;
+            // numbers[right] = numbers[right]++;
+            // carry = 0;
         }
     }
     else {
