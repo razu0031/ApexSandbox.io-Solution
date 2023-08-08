@@ -1,8 +1,8 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
-    return search2(opportunities, target, 0, opportunities.size()-1);
+    return searchRecursion(opportunities, target, 0, opportunities.size()-1);
 }
 
-public static Integer search2(List<Opportunity> opportunities, Integer target, Integer left, Integer right){
+public static Integer searchRecursion(List<Opportunity> opportunities, Integer target, Integer left, Integer right){
     if (left > right) return -1;
 
     Integer middle = (left + right) / 2;
