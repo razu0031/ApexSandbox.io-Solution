@@ -1,5 +1,5 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
-    return search(opportunities, target, 0, opportunities.size()-1);
+    return search2(opportunities, target, 0, opportunities.size()-1);
 }
 
 public static Integer search2(List<Opportunity> opportunities, Integer target, Integer left, Integer right){
