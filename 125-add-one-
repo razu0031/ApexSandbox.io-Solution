@@ -1,27 +1,27 @@
 public void plusOne(List<Integer> numbers) {
-    // Integer num = Integer.valueOf(String.join(numbers, ''));
-    // num++;
-    // numbers = new List<Integer>();
-    // for (String n : (num+'').split('')) {
-    //     numbers.add(Integer.valueOf(n));
-    // }
-    Integer right = numbers.size()-1;
-    Integer carry = 1;
-    if (numbers[right] == 9) {
-        while (numbers[right] + carry == 10) {
-            numbers[right] = 0;
-            right--;
+    Integer num = Integer.valueOf(String.join(numbers, ''));
+    num++;
+    numbers = new List<Integer>();
+    for (String n : (num+'').split('')) {
+        numbers.add(Integer.valueOf(n));
+    }
+//     Integer right = numbers.size()-1;
+//     Integer carry = 1;
+//     if (numbers[right] == 9) {
+//         while (numbers[right] + carry == 10) {
+//             numbers[right] = 0;
+//             right--;
 
-            if (right < 0) {
-                numbers[0] = 1;
-                break;
-            }
+//             if (right < 0) {
+//                 numbers[0] = 1;
+//                 break;
+//             }
             
-            numbers[right] = numbers[right]++;
-            carry = 0;
-        }
-    }
-    else {
-        numbers[right]++;
-    }
-}
+//             numbers[right] = numbers[right]++;
+//             carry = 0;
+//         }
+//     }
+//     else {
+//         numbers[right]++;
+//     }
+// }
