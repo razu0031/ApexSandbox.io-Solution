@@ -1,0 +1,8 @@
+public boolean isAnagram(String s1, String s2) {
+    if (s1 == null || s2 == null) return false;
+    List<String> list1 = s1.split('');
+    list1.sort();
+    List<String> list2 = s2.split('');
+    list2.sort();
+    return list1.equals(list2);
+}
