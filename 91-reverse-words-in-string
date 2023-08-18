@@ -1,0 +1,9 @@
+public static String reverseWords(String str){
+    List<String> reverseWords = new List<String>();
+    List<String> words = str.split(' ');
+    for(String w : words) {
+        reverseWords.add(w.reverse());
+    }
+
+    return String.join(reverseWords, ' ');
+}
