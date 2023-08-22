@@ -1,0 +1,12 @@
+public Integer maxProfit(List<Integer> prices){
+    int lowPrice = 10000;
+    int currentprice = prices[0];
+    
+    for(Integer i=0; i<prices.size(); i++) {
+        if(prices.get(i) < lowPrice) currentprice = prices.get(i);
+    }
+
+    for(Integer i=prices.indexOf(currentprice); i<prices.size(); i++) {
+        if(prices.get(i) < lowPrice) currentprice = prices.get(i);
+    }
+}
