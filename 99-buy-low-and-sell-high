@@ -1,21 +1,14 @@
 public Integer maxProfit(List<Integer> prices){
-    // Integer lowestPrice = 10000;
-    // Integer maxPrice = -1;
+    Integer lowestPrice = 10000;
+    Integer maxPrice = -1;
     
-    // for(Integer i=0; i<prices.size(); i++) {
-    //     if(prices.get(i) < lowestPrice) lowestPrice = prices.get(i);
-    // }
-
-    // for(Integer i=prices.indexOf(lowestPrice); i<prices.size(); i++) {
-    //     if(prices.get(i) > maxPrice) maxPrice = prices.get(i);
-    // }
-
-    // return (maxPrice-lowestPrice) > 0 ? (maxPrice-lowestPrice) : 0;
-
-    Integer maxProfit = 0;
-    for(Integer i=1; i<prices.size(); i++) {
-        if(prices.get(i) > prices.get(i-1)) maxProfit = maxProfit + prices.get(i) - prices.get(i-1);
+    for(Integer i=0; i<prices.size(); i++) {
+        if(prices.get(i) < lowestPrice) lowestPrice = prices.get(i);
     }
 
-    return maxProfit;
+    for(Integer i=prices.indexOf(lowestPrice); i<prices.size(); i++) {
+        if(prices.get(i) > maxPrice) maxPrice = prices.get(i);
+    }
+
+    return (maxPrice-lowestPrice) > 0 ? (maxPrice-lowestPrice) : 0;
 }
