@@ -1,0 +1,16 @@
+public Boolean isSubSequence(String s1, String s2){
+    List<String> list1 = s1.split('');
+    List<String> list2 = s2.split('');
+
+    for(String s : list1) {
+        if(list2.contains(s)) {
+            if(s1.length() == 1 || s2.length() == 1) return true;
+            s1 = s1.substring(list1.indexOf(s)+1);
+            s2 = s2.substring(list1.indexOf(s)+1);
+            return isSubSequence(s1, s2);
+        }
+        else return false;
+    }
+
+    return false;
+}
