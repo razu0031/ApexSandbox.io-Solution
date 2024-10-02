@@ -3,5 +3,8 @@ public static List<Integer> squareList(List<Integer> nums){
     for (Integer num : nums) {
         squaredList.add(num*num);
     }
-    return squaredList.sort();
+
+    squaredList.sort();
+    
+    return squaredList;
 }
